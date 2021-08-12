@@ -1,8 +1,11 @@
+//COMPONENTS //
+import LandingPage from './pages/LandingPage';
+
 // STYLES //
 import './App.scss';
 
 const App = () => {
-  return <h1>Omnifood React Application</h1>;
+  return <LandingPage />;
 };
 
 export default App;
