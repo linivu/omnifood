@@ -70,7 +70,7 @@ if (task === 'build') {
   config.mode = 'production';
 
   config.module.rules[1].use[0] = MiniCssExtractPlugin.loader;
-  config.module.rules[1].use[3] = {
+  config.module.rules[1].use[2] = {
     loader: 'postcss-loader',
     options: { postcssOptions: { plugins: ['postcss-preset-env'] } },
   };
