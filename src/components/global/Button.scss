@@ -1,0 +1,36 @@
+@use '../../scss/config/' as *;
+
+.btn:link,
+.btn:visited,
+.btn:active {
+  border-radius: 0.9rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  @include transitionAll(0.3s);
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    font-size: 1.8rem;
+  }
+}
+
+.btn--primary {
+  color: $white-color;
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color-dark;
+  }
+}
+
+.btn--outline {
+  background-color: $white-color;
+  color: inherit;
+
+  &:hover {
+    background-color: $home-bg-color;
+    box-shadow: 0 0 0 3px inset $white-color;
+  }
+}
