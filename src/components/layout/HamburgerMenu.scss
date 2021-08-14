@@ -1,0 +1,59 @@
+@use '../../scss/config/' as *;
+
+.hamburger-menu {
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    display: none;
+  }
+
+  %bar-shared {
+    border-radius: 10rem;
+    background-color: #333;
+    height: 0.2rem;
+    width: 3rem;
+    @include transitionAll(0.5s);
+  }
+
+  .bar {
+    position: relative;
+    @extend %bar-shared;
+  }
+
+  .bar::before {
+    @extend %bar-shared;
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    right: 0;
+  }
+
+  .bar::after {
+    @extend %bar-shared;
+    content: '';
+    position: absolute;
+    bottom: -0.7rem;
+    right: 0;
+  }
+
+  &.open .bar {
+    background-color: transparent;
+  }
+
+  &.open .bar::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &.open .bar::after {
+    bottom: 0;
+    transform: rotate(225deg);
+  }
+}
