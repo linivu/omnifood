@@ -4,6 +4,10 @@
   height: 7rem;
   background-color: $home-bg-color;
 
+  .flex {
+    justify-content: space-between;
+  }
+
   .logo {
     height: 1.6rem;
 
