@@ -1,0 +1,24 @@
+@use '../config/' as *;
+
+section {
+  padding: 2.4rem 0 6.4rem;
+}
+
+.container {
+  height: 100%;
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 6.4rem;
+
+  @include screen('laptop') {
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+  }
+}
