@@ -1,0 +1,18 @@
+@use '../../scss/config/' as *;
+
+.header {
+  height: 7rem;
+  background-color: $home-bg-color;
+
+  .logo {
+    height: 1.6rem;
+
+    // MEDIA QUERIES
+    @include screen('tablet') {
+      height: 1.8rem;
+    }
+    @include screen('laptop') {
+      height: 2rem;
+    }
+  }
+}
