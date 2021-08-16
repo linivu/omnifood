@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import stickyNavbar from '../../utilities/stickyNavbar';
 
 // COMPONENTS //
 import Navigation from './Navigation';
@@ -12,6 +14,10 @@ import './Header.scss';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    stickyNavbar();
+  });
 
   return (
     <header className="header">
