@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 // COMPONENTS //
+import Navigation from './Navigation';
 import HamburgerMenu from './HamburgerMenu';
 
 // IMAGES //
@@ -15,7 +16,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className=" flex container">
-        <img src={logo} alt="logo" className="logo" />
+        <a href="/">
+          <img src={logo} alt="logo" className="logo" />
+        </a>
+        <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
         <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
