@@ -4,6 +4,11 @@
   height: 7rem;
   background-color: $home-bg-color;
 
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    height: 10rem;
+  }
+
   .flex {
     justify-content: space-between;
   }
