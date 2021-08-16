@@ -1,0 +1,147 @@
+@use '../../scss/config/' as *;
+
+.how-it-works {
+  .container {
+    // MEDIA QUERIES
+    @include screen('laptop') {
+      max-width: 80vw;
+    }
+  }
+
+  &__steps {
+    .no {
+      color: #ddd;
+      font-size: 6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 8.6rem;
+      }
+    }
+
+    .heading {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 2.4rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 3.2rem;
+      }
+    }
+
+    .description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: relative;
+      width: 35%;
+      justify-self: center;
+      z-index: 10;
+
+      // MEDIA QUERIES
+      @include screen('phone', landscape) {
+        width: 15%;
+      }
+      @include screen('tablet') {
+        width: 25%;
+      }
+      @include screen('laptop') {
+        width: 40%;
+      }
+      @include screen('lg laptop') {
+        width: 35%;
+      }
+      @include screen('lg desktop') {
+        width: 20%;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      background-color: #fdf2e9;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        height: 30rem;
+        width: 30rem;
+      }
+      @include screen('laptop') {
+        height: 40rem;
+        width: 40rem;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 15rem;
+      width: 15rem;
+      border-radius: 50%;
+      background-color: #fae5d3;
+
+      // MEDIA QUERIES
+      @include screen('tablet') {
+        height: 20rem;
+        width: 20rem;
+      }
+      @include screen('laptop') {
+        height: 30rem;
+        width: 30rem;
+      }
+    }
+  }
+
+  .one {
+    order: 2;
+  }
+  .two {
+    order: 1;
+  }
+  .three {
+    order: 3;
+  }
+  .four {
+    order: 4;
+  }
+  .five {
+    order: 6;
+  }
+  .six {
+    order: 5;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six {
+    // MEDIA QUERIES
+    @include screen('laptop') {
+      order: 0;
+    }
+  }
+}
