@@ -35,3 +35,23 @@
     box-shadow: 0 0 0 3px inset $white-color;
   }
 }
+
+.btn--text {
+  color: $primary-color;
+  border-bottom: 1px solid $primary-color;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  @include transitionAll(0.3s);
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    border: none;
+  }
+}
