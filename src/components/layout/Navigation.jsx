@@ -5,7 +5,7 @@ import Button from '../global/Button';
 import './Navigation.scss';
 
 const Navigation = ({ isOpen, setIsOpen }) => {
-  const navLinks = ['How it works', 'Meals', 'Testimonials', 'Pricing'];
+  const navLinks = ['how it works', 'meals', 'testimonials', 'pricing'];
 
   const onClickHandler = () => {
     setIsOpen(false);
