@@ -2,6 +2,11 @@
 
 section {
   padding: 2.4rem 0 6.4rem;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    padding: 4.8rem 0 9.6rem;
+  }
 }
 
 .container {
