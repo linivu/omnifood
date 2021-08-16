@@ -2,6 +2,12 @@
 
 .home {
   background-color: $home-bg-color;
+  padding: 9rem 0 5rem;
+
+  // MEDIA QUERIES
+  @include screen('laptop') {
+    padding: 12rem 0 10rem;
+  }
 
   &__content {
     &-btn-container {
