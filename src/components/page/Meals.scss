@@ -1,0 +1,145 @@
+@use '../../scss/config/' as *;
+
+.meals {
+  .container {
+    // MEDIA QUERIES
+    @include screen('lg laptop') {
+      max-width: 75vw;
+    }
+  }
+
+  .subheading {
+    text-align: center;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+
+  .grid {
+    margin-bottom: 3.2rem;
+
+    // MEDIA QUERIES
+    @include screen('phone', landscape) {
+      grid-template-columns: 30rem;
+      justify-content: center;
+    }
+    @include screen('tablet') {
+      grid-template-columns: 30rem 30rem;
+      justify-content: center;
+    }
+    @include screen('lg laptop') {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 4.8rem;
+    }
+    @include screen('lg desktop') {
+      grid-template-columns: repeat(3, 35rem);
+      justify-items: center;
+    }
+  }
+
+  .meal {
+    border-top-left-radius: 1.1rem;
+    border-top-right-radius: 1.1rem;
+    border-bottom-left-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+
+    &.diets {
+      box-shadow: none;
+      align-self: flex-start;
+      text-align: center;
+
+      .features {
+        padding: 0 3.2rem;
+      }
+    }
+
+    &__image {
+      display: block;
+      max-width: 100%;
+    }
+
+    &__content {
+      padding: 3.2rem 2.4rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        padding: 4.8rem 3.2rem;
+      }
+
+      .tag {
+        display: inline-block;
+        border-radius: 10rem;
+        color: #333;
+        padding: 0.4rem 0.8rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          font-size: 1.2rem;
+          padding: 0.4rem 1.2rem;
+        }
+
+        &.vegetarian {
+          background-color: #51cf66;
+        }
+
+        &.vegan {
+          background-color: #94d82d;
+        }
+
+        &.paleo {
+          background-color: #ffd43b;
+        }
+      }
+
+      .title {
+        font-size: 2rem;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 2.4rem;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          font-size: 2.4rem;
+        }
+      }
+
+      .features {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+
+          ion-icon {
+            height: 2.4rem;
+            width: 2.4rem;
+            color: $primary-color;
+          }
+          p {
+            font-size: 1.4rem;
+
+            // MEDIA QUERIES
+            @include screen('laptop') {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .flex {
+    justify-content: center;
+    align-items: center;
+  }
+}
