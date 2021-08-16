@@ -6,12 +6,6 @@ const task = process.env.npm_lifecycle_event;
 const config = {
   mode: 'development',
 
-  output: {
-    filename: 'assets/js/[name].bundle.[fullhash].js',
-    assetModuleFilename: 'assets/images/[hash][ext][query]',
-    clean: true,
-  },
-
   module: {
     rules: [
       // REACT AND JS
@@ -68,6 +62,12 @@ if (task === 'start') config.devtool = 'source-map';
 
 if (task === 'build') {
   config.mode = 'production';
+
+  config.output = {
+    filename: 'assets/js/[name].bundle.[fullhash].js',
+    assetModuleFilename: 'assets/images/[hash][ext][query]',
+    clean: true,
+  };
 
   config.module.rules[1].use[0] = MiniCssExtractPlugin.loader;
   config.module.rules[1].use[2] = {
