@@ -47,6 +47,7 @@
     font-size: 2.4rem;
     font-weight: 500;
     font-family: inherit;
+    text-transform: capitalize;
 
     // MEDIA QUERIES
     @include screen('laptop') {
