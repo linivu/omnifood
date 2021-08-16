@@ -3,6 +3,7 @@ import Header from '../components/layout/Header';
 import Home from '../components/page/Home';
 import FeaturedIn from '../components/page/FeaturedIn';
 import HowItWorks from '../components/page/HowItWorks';
+import Meals from '../components/page/Meals';
 
 const LandingPage = () => {
   return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
       <Home />
       <FeaturedIn />
       <HowItWorks />
+      <Meals />
     </main>
   );
 };
