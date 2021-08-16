@@ -41,7 +41,12 @@ const config = {
     extensions: ['.js', '.jsx'],
   },
 
-  plugins: [new HtmlWebpackPlugin({ template: 'public/index.html' })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      favicon: 'src/images/favicon.png',
+    }),
+  ],
 
   devServer: {
     port: 3000,
