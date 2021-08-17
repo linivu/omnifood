@@ -48,6 +48,11 @@
     font-weight: 500;
     font-family: inherit;
     text-transform: capitalize;
+    @include transitionAll(0.3s);
+
+    &:hover {
+      color: $primary-color;
+    }
 
     // MEDIA QUERIES
     @include screen('laptop') {
