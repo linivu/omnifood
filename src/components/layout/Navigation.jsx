@@ -22,7 +22,7 @@ const Navigation = ({ isOpen, setIsOpen }) => {
           </li>
         ))}
         <li className="nav__item">
-          <Button href="#contact" className="btn btn--primary" onClick={onClickHandler}>
+          <Button href="#cta" className="btn btn--primary" onClick={onClickHandler}>
             Try for free
           </Button>
         </li>
