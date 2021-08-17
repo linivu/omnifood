@@ -1,0 +1,190 @@
+@use '../../scss/config/' as *;
+
+.pricing {
+  .container {
+    margin-bottom: 4.6rem;
+  }
+
+  .grid {
+    // MEDIA QUERIES
+    @include screen('phone', landscape) {
+      grid-template-columns: 30rem;
+      justify-content: center;
+    }
+    @include screen('tablet') {
+      grid-template-columns: 30rem 30rem;
+    }
+    @include screen('laptop') {
+      grid-template-columns: 35rem 35rem;
+    }
+    @include screen('lg laptop') {
+      grid-template-columns: 39rem 39rem;
+    }
+  }
+
+  &__plan {
+    border: 2px solid #fdf2e9;
+    padding: 3.2rem;
+    border-radius: 1.1rem;
+
+    // MEDIA QUERIES
+    @include screen('laptop') {
+      padding: 4.8rem;
+    }
+
+    &.complete {
+      background-color: #fdf2e9;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        content: 'Best Value';
+        position: absolute;
+        top: 6%;
+        right: -18%;
+        background-color: #ffd43b;
+        color: #333;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 0.8rem 8rem;
+        transform: rotate(45deg);
+      }
+    }
+
+    &-heading {
+      color: $primary-color;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 2.4rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 1.8rem;
+      }
+      @include screen('lg laptop') {
+        font-size: 2rem;
+      }
+    }
+
+    &-price {
+      font-size: 4.8rem;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      margin-bottom: 1.2rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 5.2rem;
+      }
+      @include screen('lg laptop') {
+        font-size: 6.2rem;
+      }
+
+      span {
+        font-size: 2.4rem;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          font-size: 3rem;
+        }
+        @include screen('lg laptop') {
+          font-size: 3.6rem;
+        }
+      }
+    }
+
+    &-subheading {
+      color: #6f6f6f;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 3.2rem;
+      line-height: 1.6;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 1.4rem;
+      }
+      @include screen('lg laptop') {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-bottom: 4.8rem;
+      padding-left: 1.6rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        gap: 1.6rem;
+      }
+      @include screen('lg laptop') {
+        gap: 1.8rem;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          gap: 1.4rem;
+        }
+        @include screen('lg laptop') {
+          gap: 1.6rem;
+        }
+
+        ion-icon {
+          height: 2rem;
+          width: 2rem;
+          color: $primary-color;
+
+          // MEDIA QUERIES
+          @include screen('laptop') {
+            height: 2.2rem;
+            width: 2.2rem;
+          }
+          @include screen('lg laptop') {
+            height: 2.4rem;
+            width: 2.4rem;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+
+          // MEDIA QUERIES
+          @include screen('laptop') {
+            font-size: 1.6rem;
+          }
+          @include screen('lg laptop') {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__features {
+    &-text {
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 1.6;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        font-size: 1.4rem;
+      }
+      @include screen('lg laptop') {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
