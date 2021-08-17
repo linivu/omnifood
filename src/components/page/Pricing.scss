@@ -1,10 +1,6 @@
 @use '../../scss/config/' as *;
 
 .pricing {
-  .container {
-    margin-bottom: 4.6rem;
-  }
-
   .grid {
     // MEDIA QUERIES
     @include screen('phone', landscape) {
@@ -173,17 +169,100 @@
   }
 
   &__features {
+    margin-top: 4.8rem;
+
+    .grid {
+      gap: 4.8rem;
+
+      // MEDIA QUERIES
+      @include screen('laptop') {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      }
+    }
+
     &-text {
       font-size: 1.2rem;
       text-align: center;
       line-height: 1.6;
+      margin-bottom: 3.2rem;
 
       // MEDIA QUERIES
       @include screen('laptop') {
         font-size: 1.4rem;
+        margin-bottom: 4.8rem;
       }
       @include screen('lg laptop') {
         font-size: 1.6rem;
+        margin-bottom: 6.4rem;
+      }
+    }
+
+    &-feature {
+      .icon {
+        height: 4.8rem;
+        width: 4.8rem;
+        border-radius: 50%;
+        background-color: #fdf2e9;
+        display: grid;
+        place-content: center;
+        color: $primary-color;
+        margin-bottom: 1.6rem;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          height: 5.2rem;
+          width: 5.2rem;
+          margin-bottom: 2rem;
+        }
+        @include screen('lg laptop') {
+          height: 5.8rem;
+          width: 5.8rem;
+          margin-bottom: 2.4rem;
+        }
+
+        ion-icon {
+          height: 2.4rem;
+          width: 2.4rem;
+
+          // MEDIA QUERIES
+          @include screen('laptop') {
+            height: 2.6rem;
+            width: 2.6rem;
+          }
+          @include screen('lg laptop') {
+            height: 2.8rem;
+            width: 2.8rem;
+          }
+        }
+      }
+
+      .heading {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 1.2rem;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          font-size: 2rem;
+          margin-bottom: 1.6rem;
+        }
+        @include screen('lg laptop') {
+          font-size: 2.4rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .text {
+        font-size: 1.4rem;
+        line-height: 1.4;
+
+        // MEDIA QUERIES
+        @include screen('laptop') {
+          font-size: 1.6rem;
+        }
+        @include screen('lg laptop') {
+          font-size: 1.8rem;
+        }
       }
     }
   }
