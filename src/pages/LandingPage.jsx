@@ -5,6 +5,7 @@ import FeaturedIn from '../components/page/FeaturedIn';
 import HowItWorks from '../components/page/HowItWorks';
 import Meals from '../components/page/Meals';
 import Testimonials from '../components/page/Testimonials';
+import Pricing from '../components/page/Pricing';
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <HowItWorks />
       <Meals />
       <Testimonials />
+      <Pricing />
     </main>
   );
 };
