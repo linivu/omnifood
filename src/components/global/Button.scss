@@ -56,3 +56,21 @@
     border: none;
   }
 }
+
+.btn--cta {
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+  border: none;
+  width: 100%;
+  border-radius: 0.9rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-block;
+
+  // MEDIA QUERIES
+  @include screen('lg laptop') {
+    padding: 1.4rem;
+    font-size: 1.8rem;
+  }
+}
